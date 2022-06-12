@@ -98,17 +98,22 @@ return packer.startup(function(use)
   use 'folke/trouble.nvim'
 
   -- Markdown preview
-  use{
+  use {
     'iamcco/markdown-preview.nvim',
     run = "cd app && npm install",
-    setup = function() 
+    setup = function()
       vim.g.mkdp_filetypes = { "markdown" }
     end,
     ft = { "markdown" },
   }
+
+  -- Lualine
   use {
   'nvim-lualine/lualine.nvim',
-  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  requires = {
+      'kyazdani42/nvim-web-devicons',
+      opt = true
+    }
   }
 
   -- Automatically set up your configuration after cloning packer.nvim
