@@ -47,7 +47,6 @@ return packer.startup(function(use)
   --use 'lukas-reineke/indent-blankline.nvim'
   --use 'folke/which-key.nvim'
   --use 'vim-airline/vim-airline'
-  use 'nvim-lualine/lualine.nvim'
   use 'preservim/nerdtree'
   use 'Xuyuanp/nerdtree-git-plugin'
   use 'majutsushi/tagbar'
@@ -99,7 +98,18 @@ return packer.startup(function(use)
   use 'folke/trouble.nvim'
 
   -- Markdown preview
-  use 'iamcco/markdown-preview.nvim'
+  use{
+    'iamcco/markdown-preview.nvim',
+    run = "cd app && npm install",
+    setup = function() 
+      vim.g.mkdp_filetypes = { "markdown" }
+    end,
+    ft = { "markdown" },
+  }
+  use {
+  'nvim-lualine/lualine.nvim',
+  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
