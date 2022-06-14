@@ -18,7 +18,7 @@ local modules = {
   "customer.nerdtree",
   "customer.whichkey",
   "customer.lualine",
-  "customer.autopairs",
+  --"customer.autopairs",
   "customer.indent-blankline",
 }
 
