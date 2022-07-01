@@ -15,6 +15,7 @@ vim.cmd [[
     autocmd!
     autocmd FileType go setlocal tabstop=8
     autocmd FileType go setlocal shiftwidth=8
+    autocmd BufWritePre *.go lua OrgImports(1000)
   augroup end
   augroup _yaml
     autocmd!

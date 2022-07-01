@@ -85,7 +85,7 @@ M.on_attach = function(client, bufnr)
   lsp_keymaps(bufnr)
   lsp_highlight_document(client)
 
-  vim.api.nvim_command("au BufWritePre *.go :silent! lua goimports(1000)")
+  --vim.api.nvim_command("au BufWritePre *.go :silent! lua goimports(1000)")
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
