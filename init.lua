@@ -13,11 +13,12 @@ local modules = {
   "customer.treesitter",        -- 代码高亮
   "customer.telescope",         -- 搜索
   "customer.gitsigns",          -- Git
-  "customer.nerdtree",          -- 目录树
+  --"customer.nerdtree",          -- 目录树
   "customer.whichkey",          -- 快捷键指令辅助
   "customer.lualine",           -- 状态栏
-  "customer.autopairs",         -- 自动完成括号
+  --"customer.autopairs",         -- 自动完成括号
   "customer.indent-blankline",  -- 代码辅助线
+  "customer.neo-tree",          -- 目录树
 }
 
 for _, module in ipairs(modules) do

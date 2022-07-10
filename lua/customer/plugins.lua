@@ -47,8 +47,8 @@ return packer.startup(function(use)
   --use 'lukas-reineke/indent-blankline.nvim'
   --use 'folke/which-key.nvim'
   --use 'vim-airline/vim-airline'
-  use 'preservim/nerdtree'
-  use 'Xuyuanp/nerdtree-git-plugin'
+  --use 'preservim/nerdtree'
+  --use 'Xuyuanp/nerdtree-git-plugin'
   use 'majutsushi/tagbar'
   use 'windwp/nvim-autopairs'
   --use 'akinsho/toggleterm.nvim'
@@ -113,6 +113,17 @@ return packer.startup(function(use)
   requires = {
       'kyazdani42/nvim-web-devicons',
       opt = true
+    }
+  }
+
+  -- File Tree
+  use {
+  "nvim-neo-tree/neo-tree.nvim",
+    branch = "v2.x",
+    requires = { 
+      "nvim-lua/plenary.nvim",
+      "kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
     }
   }
 
